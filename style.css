@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  padding: 0;
   margin: 0;
 }
 
@@ -18,32 +19,49 @@ body {
 
 .card {
   background-color: hsl(0, 0%, 100%);
+  height: auto;
   padding: 24px;
-  flex-wrap: wrap;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
   gap: 24px;
-  border-radius: 20px;
   box-shadow: 8px 8px 0px hsl(0, 0%, 7%);
   border: 1px solid hsl(0, 0%, 7%);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
 }
 
-.card > .img1 {
+header,
+main,
+footer {
   width: 100%;
-  border-radius: 10px;
-  display: block;
+  height: auto;
 }
 
-.card > div:first-of-type {
+.img1 {
+  width: 100%;
+  display: block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 12px;
 }
 
-.card .learning {
+main .learning {
   background-color: hsl(47, 88%, 63%);
   font-weight: 800;
   display: block;
@@ -54,37 +72,42 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   padding: 4px 12px;
-  border-radius: 4px;
   text-align: center;
   color: hsl(0, 0%, 7%);
   font-size: 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
 
-.card .published {
+main .published {
   display: block;
   font-size: 12px;
   font-weight: 500;
 }
 
-.card .hcf {
+main h1 {
   display: block;
   font-weight: 800;
   color: hsl(0, 0%, 7%);
   font-size: 20px;
 }
 
-.card .hcf:hover {
+main h1:hover {
   color: hsl(47, 88%, 63%);
   cursor: pointer;
 }
 
-.card p {
+main p {
   color: hsl(0, 0%, 42%);
   font-size: 14px;
 }
 
-.card div:last-of-type {
+footer {
   width: 100%;
+  height: fit-content;
   display: flex;
   align-self: center;
   gap: 12px;
@@ -93,10 +116,14 @@ body {
 .img2 {
   width: 32px;
   height: 32px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
 }
 
-.card > div > span {
+footer span {
   color: hsl(0, 0%, 7%);
   display: flex;
   justify-content: center;
@@ -118,27 +145,31 @@ body {
 
 @media (min-width: 425px) {
   .card {
-    width: 385px;
-    height: 525px;
+    width: 384px;
+    height: 522px;
   }
 
-  .card .learning {
+  main {
+    gap: 22px;
+  }
+
+  main .learning {
     font-size: 14px;
   }
 
-  .card .published {
+  main .published {
     font-size: 14px;
   }
 
-  .card .hcf {
+  main h1 {
     font-size: 22px;
   }
 
-  .card p {
+  main p {
     font-size: 16px;
   }
 
-  .card > div > span {
+  footer span {
     font-size: 16px;
   }
 }
